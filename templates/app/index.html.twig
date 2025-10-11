@@ -1,0 +1,28 @@
+{% extends "base.html.twig" %}
+
+{% block body %}
+    <div class="container mx-auto px-4 py-8">
+        <!-- Teste Tailwind CSS -->
+        <h1 class="text-4xl font-bold text-blue-600 text-center mb-4">
+            Welcome to Wiki Coaster!
+        </h1>
+        
+        <!-- Teste DaisyUI components -->
+        <div class="flex justify-center gap-4 mb-6">
+            <button class="btn btn-primary">Primary Button</button>
+            <button class="btn btn-secondary">Secondary Button</button>
+            <button class="btn btn-accent">Accent Button</button>
+        </div>
+        
+        <!-- Card com DaisyUI -->
+        <div class="card w-96 bg-base-100 shadow-xl mx-auto">
+            <div class="card-body">
+                <h2 class="card-title">Card Title!</h2>
+                <p>If a dog chews shoes whose shoes does he choose?</p>
+                <div class="card-actions justify-end">
+                    <button class="btn btn-primary">Buy Now</button>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
