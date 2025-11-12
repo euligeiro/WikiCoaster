@@ -16,6 +16,7 @@
         
         <!-- Card com DaisyUI -->
         <div class="card w-96 bg-base-100 shadow-xl mx-auto">
+
             <div class="card-body">
                 <h2 class="card-title">Card Title!</h2>
                 <p>If a dog chews shoes whose shoes does he choose?</p>
@@ -25,4 +26,34 @@
             </div>
         </div>
     </div>
+
+    <div class="overflow-x-auto">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Nom </th>
+                    <th>Longeur</th>
+                    <th> Vit.Max </th>
+                    <th>Haut Max<th/>
+                    <th>Action</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                 {%for entity in entities %}
+                 {# tr>td*6 #}
+                 <td>
+                    <td> <strong> {{entity.name}} </strong></td>
+                    <td> {{entity.length}} </td>
+                    <td> {{entity.maxSpeed}}</td>
+                    <td> {{entity.maxHeight}} </td>
+                    <td> {{entity.operating ? '|' ''}} </td>
+                    <td></td>
+
+                {% endfor %}
+
+                </tbody>
+
+            </table>
+        </div>
 {% endblock %}
